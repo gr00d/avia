@@ -1,0 +1,61 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Documentation for JAviasales API",
+    "title": "Aviasales API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/v1/compare": {
+      "get": {
+        "operationId": "CompareHandlerQuery",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "Ticket1",
+            "name": "ticket1",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "string",
+            "x-go-name": "Ticket2",
+            "name": "ticket2",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/v1/search": {
+      "get": {
+        "operationId": "SearchHandlerQuery",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "Source",
+            "name": "source",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "string",
+            "x-go-name": "Destination",
+            "name": "destination",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "string",
+            "x-go-name": "Type",
+            "description": "Possible type: cheapest mostExpensive longest shortest optimal",
+            "name": "type",
+            "in": "query"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  }
+}
